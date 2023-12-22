@@ -1,0 +1,20 @@
+Algorithm arrayMax(A, n):
+	Input: An array A storing n >= 1 integers,
+	Output: The maximum element in A.
+	currentMax <-- A[0]
+	for i <-- 1 to n - 1 do
+		if currentMax < A[i] then
+			currentMax <-- A[i]
+	return currentMax
+
+这个是关于arrayMax算法的伪代码，求其 total primitive operations？
+
+
+
+R-1.11 Give a big-Oh characterization, in terms of n, of the running time of the Loop1 method.
+
+
+Algorithm Loop1(n):
+	s ← 0
+	for i ← 1 to n do
+		s ← s + i

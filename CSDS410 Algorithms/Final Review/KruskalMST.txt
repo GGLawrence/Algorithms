@@ -1,0 +1,181 @@
+Algorithm KruskalMST(G):
+	Input: A weighted connected simple undirected Graph G with n vertices and m edges.
+	Output: the G’s MST named T.
+	
+	for each vertex in G do
+		Define the vertex cluster C(v) <- {v} 
+
+	Create a PQ named Q to store all edges in G, using the edge weight as key.
+	T <- 空集 //use T to store the edge of MST
+	
+	while T has fewer than n-1 edges do
+		(u,v) <- Q.removeMin()
+		Let C(u) be the cluster containing v
+		Let C(v) be the cluster containing u
+		if C(u) != C(v) then
+			Add edge (u,v) into T
+			Union C(v) and C(u)
+	return T
+
+Algorothm KruskalMST(G):
+
+	Input: A simple weighted connected undirection Graph G, with n vertices and m edges.
+	Output: T, it is G's MST.
+
+	for each vertex v in G do --------------------------------------O(n)            
+		Define vertex cluster C(v), C(v) <- {v}-----------------
+	Creat a PQ named Q to store all edges in G, using edge's weight as key. -----------O(log m)
+	T <- 空集  // use T to store edges of MST then
+
+	while T has fewer than n - 1 edges do ---------worst case m times
+		edge (u,v)  <- Q.removeMin() -------------------------O(log m)
+		Let C(u) be the cluster containing vertex u
+ 		Let C(v) be the cluster containing vertex v
+		if C(u) != C(v) then --------------执行n-1次 ~ <= n次
+			Add edge (u,v) into T
+			Union C(u) and C(v)--------------------------所以合并总过程union一次为平均log n, total merging time: n log n 
+	return T
+
+	runtime: n + log m + m log m + n log n <= (m+n) log n, because m<=n(n-1)/2, then runtime <= m log n.
+
+- Minimum Spanning Tree (MST)
+  -- define MST
+Given a simple undirected connected weighted Graph G, with n vertices and m edges, computing the spanning tree with total smallest edge weight is the MST minimum spanning tree.
+
+  -- give example of
+
+  -- properties of MST
+	circle property
+	Given a simple weight connected undirected weight, if an edge e is not in the T(edge cluster of MST), then the weight of e is at least as greater than the weight of any edge in the circle created by adding e into T.
+	Prove by contradiction:
+	Assume the weight of e is smaller than an edge f's weight in the circle, and f is in T. And then we can replace f with e, and create a new Spanning Tree T'. And weight(T') will be smaller than weight(T), so T' will be the MST in G rather than T. It will contradict the fact T is MST. So no such edge f exists. 		
+	partition property(cut partition)
+	Given a partition of the vertices of G into subsets U adn V, let e be an edge of minimum weight across the aprtition, and then there is a MST of G containing edge e.
+	Prove by contradiciton:
+	Assume T (MST of G) contains other edge f rather than e, and weight f > weight e. And then we can create a new spanning tree T' through replaceing f with e in T. Total weight of T' will be smaller than T(MST). It contradicts the fact that T is MST. So no such edge f exists.  
+	
+  -- review proofs from assignment relating to trees, cycles, MST
+
+1.Suppose G is an undirected, connected, weighted graph such that the edges in G have distinct edge weights. Show that the minimum spanning tree for G is unique.
+
+Proof by contradiction:
+Given a weighted connected undirected simple Graph G, assume T1 and T2 are 2 MST of G, so Weight(T1) = Weight(T2). There must be at least one edge e contained in T1 rather than T2. If we add e into T2, it will creat a circle. f is an edge in this circle and in T2, and e and f have one same node together. If weight e is larger than f, then we can replace e with f, and add f into T1 to create a new spanning tree T1'. Weight T1' will be smaller than T1, thus it contrasts T1 is MST. If weight e < weight f, then we can replace f with e, and add e into T2 to create a new spanning tree T2'. Weight T2' < Weight T2, it also contrasts T2 is MST. So for this G, MST is unique.
+
+
+  -- what is meant by an optimality condition - logical facts or post condition that must hold for any algo that solves MST
+circle property， partition property(cut partition)
+
+
+  -- given the Lemma Cycle OPtimaltiy Condition, prove it by contradition and exchange argument 
+ircle property
+  -- Kruskel's algorithm
+    -- give code
+    -- prove correctness and runtime
+    -- given instance of the problem give the order EDGES are added (when asked for an edge you must give 2 endpoints e.g. (u,v) )
+
+- Shortest Paths
+  -- give defintion
+  -- compare/contrast with MST
+  -- properties of a shortest path, can an edge weight be < 0 for undirected graph? explain
+  -- proofs relating to shortest path discussed in class (prefix of a shortest path)
+  -- Dijkstra's algorithm and main idea
+     -- edge relation and importance of
+     -- explain why it is safe to remove D[u] from the minimum priority queue before all edges are examined
+     -- given instance, give the order EDGES are added to the shortest path
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

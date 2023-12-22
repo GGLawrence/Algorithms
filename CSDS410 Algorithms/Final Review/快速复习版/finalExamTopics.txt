@@ -1,0 +1,187 @@
+All topics from Module 1 through and including Module 9 on NP-Completeness. This is a comprehensive exam.
+
+Review assignments 1, 2, 3, 4, 5 and 6. Review all topics discussed in class.
+
+Review your study material for the midterm.
+
+---------------------------------------------------------------
+- Below are the study topics provided for the midterm. 
+- Review all of the material.
+---------------------------------------------------------------
+
+Write algorithms that may be a variation of those reviewed in class and
+ - Explain the main concept of your algorithm
+ - Give pseudo-code
+ - Present an example of running your algorithm
+ - Prove/justify its correctness and its running time
+
+Given input, provide the output and/or other information relating to the algorithm. 
+ - e.g. for graph algorithms, given a representation of a graph, provide info on the DFS tree, BFS tree, Directed DFS or BFS, Top Sort order and other information that may be derived from the algorithm
+
+Proof techniques 
+ - Proof by Induction
+ - Proof by contradition
+ - Proof by counter example
+ - Proof by explaning a loop invariant
+show a recursion tree for runtime analysis
+
+What does Big-Oh, Big-Theta, Big-Omega, little-oh, little-theta and little-omega mean?
+ - Given function function f(n) use limit rule or defintion of Big-Oh, Big-Theta, ... to show that it is in g(n)
+ - Given some code, determine the runtime
+
+Algorithms Discussed
+ - arrayMax
+ - recursiveArrayMax
+ - iterativeFactorial
+ - recursiveFactorial
+
+Sorting Algorithms
+ - Merge Sort
+ - Quick Sort
+ - Heap Sort
+ - Bucket Sort
+ - Radix Sort
+
+What is the selection problem and how to solve, runtime analysis.
+
+What is Median-of-Medians, when used, why important, runtime analysis.
+
+Union Find Connected Components Algorithm and the Union Find Data Structure made with linked-lists
+ - operations (a.k.a. functions)
+ - runtime analysis for different operations
+ - runtime for creating the data structure 
+
+Graphs 
+ - terminology for directed, undirected, acyclic graphs
+ - how to represent internally (adjacency lists via vertex or edges, adjacency matrix)
+    -- explain/give runtime of operations on graphs that are represented by an adjacency list or adjacency matrix
+ - Graph Algorithms
+    -- Depth First Search (DFS)
+    -- Breadth First Search (BFS)
+    -- Directed DFS
+    -- Directed BFS
+    -- Topological Ordering
+
+---------------------------------------------------------------
+- Below are the study topics provided after the midterm. 
+- Review all of the material.
+---------------------------------------------------------------
+This may not be all inclusive. Review your homework assignments, quizzes, lecture material and reading assignments.
+
+In general, be able to determine/explain/prove runtime, prove or justify correctness, explain how algorithms work, give an example of the algorithm. 
+
+Write algorithms that may be a variation of those reviewed in class and
+ - Explain the main concept of your algorithm
+ - Give pseudo-code
+ - Present an example of running your algorithm
+ - Prove/justify its correctness and its running time
+
+Be able to give/explain proofs for the various algorithms. 
+
+Be able to compare/contrast problems and algorithms.
+
+Dynamic and Greedy algorithms
+- What is dynamic programming? 
+- Why use dynamic programming-how does it help runtime. 
+- Which algos are dynamic and which are greedy and why? 
+- What is greedy programming? Examples of.
+- Compare/contrast greedy & dynamic algorithms
+- Compare/contrast problems both before and after the midterm
+- Proof methods to prove correctness of greedy algorithms
+  -- exchange argument vs lower bound argument
+
+Problems 
+- Telescope Scheduling Problem 
+  -- explain the problem
+  -- give an example or given an instance of the problem, solve it
+  -- explain the algorithm 
+  -- is it greedy or dynamic or some other type of algorithm, explain why?
+
+- Coins in a line 
+  -- how many coins must be in a line
+  -- does this require dynamic programming or greedy algorithm, explain and benefit of dynamic or greedy w.r.t. this problem
+  -- explain the problem and goal
+  -- explain the players strategies
+  -- give examples of
+  -- you do not have to memorize M(i,j) calculation, but do be able to explain the players strategies
+  -- or maybe given its code, explain it
+  -- algorithm runtime and explain it
+  -- greedy or dynamic and why
+
+- Knapsack problems (0-1 Knapsack and Fractional Knapsack)
+  -- explain the problem
+  -- give an example or given an instance of the problem, solve it
+  -- explain the algorithm and how are choices made and why, any important properties involved in making such a choice
+  -- is it greedy or dynamic or some other type of algorithm, explain why?
+  -- compare/contrast the problems and algorithms
+  -- given a scenario would you use 0-1 Knapsack or Fractional Knapsack, or
+  -- you give a scenario of when using 0-1 knapsack is approriate and when Fractional is appropriate
+  -- given Fractional Knapsack algorithm prove it is correct, that it returns an optimal choice of weights of item to be included in the knapsack
+
+- Task scheduling problem
+  -- what is it?
+  -- how to solve/give algorithm, explain it, justify runtime, prove correctness by lower bound argument
+  -- difference between Task Scheduling and Telescope Scheduling problems
+ 
+- Minimum Spanning Tree (MST)
+  -- define MST
+  -- give example of
+  -- properties of MST
+  -- review proofs from assignment relating to trees, cycles, MST
+  -- what is meant by an optimality condition - logical facts or post condition that must hold for any algo that solves MST
+  -- given the Lemma Cycle OPtimaltiy Condition, prove it by contradition and exchange argument 
+  -- Kruskel's algorithm
+    -- give code
+    -- prove correctness and runtime
+    -- given instance of the problem give the order EDGES are added (when asked for an edge you must give 2 endpoints e.g. (u,v) )
+
+- Shortest Paths
+  -- give defintion
+  -- compare/contrast with MST
+  -- properties of a shortest path, can an edge weight be < 0 for undirected graph? explain
+  -- proofs relating to shortest path discussed in class (prefix of a shortest path)
+  -- Dijkstra's algorithm and main idea
+     -- edge relation and importance of
+     -- explain why it is safe to remove D[u] from the minimum priority queue before all edges are examined
+     -- given instance, give the order EDGES are added to the shortest path
+
+- NP-Completeness
+  -- Difference between optimization problem input/output to algo and decision problem input/output to algo
+  -- Is P = NP or P a subset of NP? explain the importance of this question and common believe and why, draw picture of this and explain your picture
+  -- What is P classification 
+  -- What is NP classification
+  -- What is NP-Complete classification
+  -- What is NP-Hard classification
+  -- What are the steps to prove a problem is in NP-Complete?
+  -- Be able to prove a decision problem is in NP-Complete. Focus on the ones we did in class.
+  -- Be able to give problem definitions. 
+  -- Be able to pose a problem as a decision problem and a verification problem and an optimization problem, when appropriate.
+  -- Explain the difference between a decision and verification problem statement 
+
+- For each of the following below, be able to
+ -- give the definition
+ -- define the decision and verification problem
+ -- give an algorithm for the verificaiton problem 
+    (note, this is already included in the NP-Completeness 
+    section above since this portion is needed to show a 
+     problem is in P when proving an problem is in NP-Complete)
+ -- give an example
+    --- Hamiltonian Cycle (H.C.)
+    --- k-coloring of a graph
+    --- clique cover
+    --- Independent Set
+    --- 3CNF 
+    --- 3Sat (problem, define terms needed for this problem)
+    --- clique
+    --- vertex cover
+    --- Subset Sum
+
+- NP-Complete proofs done in class (if I did not list some that we did in class, you are still responsible. If you wish, let me know and I'll add it to the list)
+  -- Clique Cover by reducing 3 colorability to Clique cover
+  -- Independent Set by reducting 3-SAT to Independent Set
+  -- Clique by reducing Independent Set to Clique
+  -- Subset Sum by reducing Vertex Cover to Subset Sum
+
+  
+
+
